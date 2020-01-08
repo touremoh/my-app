@@ -1,0 +1,15 @@
+<mat-card class="basic-card">
+    <mat-card-title>TODO LIST</mat-card-title>
+</mat-card>
+
+<mat-card class="basic-card">
+    <mat-form-field [ngStyle]="{width: '100%'}">
+        <input matInput placeholder="Task Name" [(ngModel)]="name">
+    </mat-form-field>
+    <button (click)="addNewTask()"> + New </button>
+</mat-card>
+
+<mat-card [ngStyle]="{textAlign: 'center', marginTop: '20px'}" *ngFor="let task of tasks">
+    <mat-card-content><p>{{task}}</p></mat-card-content>
+</mat-card>
+
