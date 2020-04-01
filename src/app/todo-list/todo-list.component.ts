@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-todo-list',
@@ -6,21 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  private name = "";
-  private tasks = [];
+  // tslint:disable-next-line:no-input-rename
+  @Input() tasks = [];
 
   constructor() {}
 
   ngOnInit() {}
 
-  containsTask() : boolean {
+  containsTask(): boolean {
     return this.tasks.length > 0;
   }
-
-  addNewTask() {
-    if (this.name.length > 0) {
-      this.tasks.push(this.name);
-    }
-  }
-
 }

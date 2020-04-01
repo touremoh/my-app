@@ -1,3 +1,4 @@
-<div class="main-page">
-    <app-todo-list></app-todo-list>
+<div class="container">
+  <app-todo-cockpit (taskCreated)='onTaskCreated($event)'></app-todo-cockpit>
+  <app-todo-list [tasks]="tasksList"></app-todo-list>
 </div>

@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyApp';
+  tasksList = [];
+  onTaskCreated(taskName: string) {
+    if (taskName) {
+      this.tasksList.push(taskName);
+    } else {
+      alert('You should provide a task name');
+    }
+  }
 }
